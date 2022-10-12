@@ -1,0 +1,3 @@
+## pendiente
+
+play/pause counter
