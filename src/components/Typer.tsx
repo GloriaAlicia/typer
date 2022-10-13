@@ -1,34 +1,22 @@
 import { useState } from 'react';
+import { convertText } from '../helpers/convertText';
 import { checkText } from '../hooks/check';
 import { getText } from '../hooks/getText';
+import { HiddenInput } from './HiddenInput';
+import { Paragraph } from './Paragraph';
 
 export const Typer = () => {
-  const originalText = 'lorem ipsum dolor sit amet';
   const [typed, setText] = useState('');
-  checkText(originalText, typed);
+  // checkText(originalText, typed);
+  // comparar index, valor 'p' -> typed 'k'
 
-  const handleInputChange = ({
-    currentTarget,
-  }: {
-    currentTarget: HTMLInputElement;
-  }) => {
-    setText(currentTarget.value);
-  };
+  const originalText = 'lorem ipsum dolor sit amet';
+  const letters = convertText(originalText);
 
   return (
-    <div>
-      <p> {originalText} </p>
-
-      <input
-        name="task"
-        placeholder="type"
-        autoComplete="off"
-        maxLength={150}
-        value={typed}
-        id={'12'}
-        autoFocus={true}
-        onChange={handleInputChange}
-      />
-    </div>
+    <section>
+      <Paragraph render={letters} />
+      <HiddenInput />
+    </section>
   );
 };
