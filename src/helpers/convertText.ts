@@ -6,5 +6,6 @@ export const convertText = (originalText: string) => {
   return convertText.map((letter) => ({
     letter: letter,
     id: uuid(),
+    state: 'normal',
   }));
 };

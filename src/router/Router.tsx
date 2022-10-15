@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Provider } from '../context';
 import ErrorPage from '../pages/ErrorPage';
 import { TyperApp } from '../pages/TyperApp';
 
@@ -15,5 +16,9 @@ export const Router = () => {
     },
   ]);
 
-  return <RouterProvider router={router} />;
+  return (
+    <Provider>
+      <RouterProvider router={router} />
+    </Provider>
+  );
 };

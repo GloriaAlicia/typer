@@ -1,7 +1,7 @@
-import { Timer } from '../hooks/timer';
+import { useTimer } from '../hooks/useTimer';
 
 export const CounterTimer = () => {
-  const { time, setTime } = Timer(0);
+  const { time, setTime } = useTimer(0);
 
   return (
     <section>
