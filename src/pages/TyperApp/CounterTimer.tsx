@@ -1,4 +1,4 @@
-import { useTimer } from '../hooks/useTimer';
+import { useTimer } from '../../hooks/useTimer';
 
 export const CounterTimer = () => {
   const { time, setTime } = useTimer(0);

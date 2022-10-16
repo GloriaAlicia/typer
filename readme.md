@@ -1,5 +1,6 @@
-## pendiente
+## Features
 
-play/pause counter
-
-sincronizar timer y input
+Counter  
+Sincronizar timer y input  
+Acurance  
+WPM

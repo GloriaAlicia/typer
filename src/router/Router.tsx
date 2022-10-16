@@ -11,8 +11,8 @@ export const Router = () => {
       errorElement: <ErrorPage />,
     },
     {
-      path: '/some',
-      element: <div>hi!</div>,
+      path: '/settings',
+      element: <div>settings in progress...</div>,
     },
   ]);
 

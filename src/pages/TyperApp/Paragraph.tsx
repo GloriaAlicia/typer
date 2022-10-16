@@ -1,15 +1,6 @@
 import { useContext } from 'react';
-import { Context } from '../context';
+import { Context } from '../../context';
 
-interface ContextInterface {
-  letters: letter[];
-  setLetters: React.Dispatch<React.SetStateAction<letter[]>>;
-}
-type letter = {
-  id: string;
-  letter: string;
-  state: string;
-};
 export const Paragraph = () => {
   const { letters } = useContext<ContextInterface>(Context);
 
@@ -18,8 +9,6 @@ export const Paragraph = () => {
     if (state === 'correct') return 'text-green-600';
     if (state === 'error') return 'text-pink-800';
   };
-  // console.log('parrafo rerenderizado');
-  console.log(letters);
 
   return (
     <>

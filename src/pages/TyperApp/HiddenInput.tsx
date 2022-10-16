@@ -1,15 +1,11 @@
 import { useState } from 'react';
-import { useCheckAcurance } from '../hooks/useCheckAcurance';
-import { Paragraph } from './Paragraph';
-
-// interface InputBoxProps {
-//   value: string | undefined;
-//   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
-// }
+import { useAcurance } from '../../hooks/useAcurance';
+import { useCheckText } from '../../hooks/useCheckText';
 
 export const HiddenInput = () => {
   const [typed, setText] = useState('');
-  useCheckAcurance(typed);
+  useCheckText(typed);
+  // useAcurance(typed);
 
   const handleInputChange = ({
     currentTarget,
